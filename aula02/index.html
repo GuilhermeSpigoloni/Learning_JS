@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="js.js" defer></script>
+    <title>BANCO</title>
+</head>
+
+<body>
+    <main class="main-content">
+        <header class="header-banner">
+            <h1 class="main-title">Cálculo de Desconto e Benefícios</h1>
+        </header>
+
+        <section class="input-section">
+            <h2 class="section-title">Insira o valor total da compra</h2>
+            <div class="input-wrapper">
+                <input type="text" id="inserirvalor" class="input-name" placeholder="Exemplo: 50">
+            </div>
+        </section>
+
+        <section class="input-section">
+            <h2 class="section-title">Insira o tipo de assinatura</h2>
+            <select class="form-select" id="assinatura" aria-label="Default select example">
+                <option selected>Selecione a assinatura</option>
+                <option value="SILVER">SILVER</option>
+                <option value="GOLD">GOLD</option>
+                <option value="PLATINUM">PLATINUM</option>
+                <option value="PADRAO">PADRÃO</option>
+            </select>
+        </section>
+
+    </main>
+    
+    <h1>Regras de Desconto</h1>
+    <h2>- SILVER: 5% de desconto</h2>
+    <h2>- GOLD: 10% de desconto</h2>
+    <h2>- PLATINUM: 15% de desconto</h2>
+    <h2>- Padrão: Nenhum desconto será aplicado</h2>
+    
+    <button class="button-add" id="btnAplicarDesconto">APLICAR DESCONTO</button>
+    <script>
