@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <h1>Calculadora</h1>
+    <h1>1 - Calculadora</h1>
 
     <span>Insira o primeiro número</span>
     <input type="number" id="n1"> <br>
@@ -70,7 +70,7 @@
 
     
 
-    <h1>Média de 3 Notas</h1>
+    <h1>2 - Média de 3 Notas</h1>
     <span>Insira o Primeiro número</span>
     <input type="number" id="nu1"> <br>
     <span>Insira o Segundo número</span>
@@ -96,9 +96,91 @@
 
 
 
+    <h1>3 - Cálculo de Desconto na compra de acordo com o Benefício</h1>
+    <span>Valor Total:</span>
+    <input type="" id="totalValor"><br><br>
+
+    <button onclick="prata()">silver</button>
+    <button onclick="ouro()">gold</button>
+    <button onclick="platina()">platinum</button>
+    <button onclick="show()">Não Aplicar Desconto</button>
+
+    <h2 id="conclusao"></h2>
+
+    <script>
+
+        
+
+        function prata(){
+            var final = parseFloat(document.getElementById('totalValor').value)
+            var result = final - (final * 0.05)
+            if (result > 300){
+            mostrar = document.getElementById('conclusao')
+            mostrar.textContent = `Parabéns, por sua compra ter sido no valor de R$${result.toFixed(2)}, você tem direito a um brinde!`
+        }
+        else{
+            mostrar = document.getElementById('conclusao')
+            mostrar.textContent = 'Valor final da compra R$'+result.toFixed(2)
+        }
+        }
+
+        function ouro(){
+            var final = parseFloat(document.getElementById('totalValor').value)
+            var result = final - (final * 0.10)
+            if (result > 300){
+            mostrar = document.getElementById('conclusao')
+            mostrar.textContent = `Parabéns, por sua compra ter sido no valor de R$${result.toFixed(2)}, você tem direito a um brinde!`
+        }
+        else{
+            mostrar = document.getElementById('conclusao')
+            mostrar.textContent = `Valor final da compra R$${result.toFixed(2)}`
+        }
+        }
+
+        function platina(){
+            var final = parseFloat(document.getElementById('totalValor').value)
+            var result = final - (final * 0.15)
+            if (result > 300){
+                mostrar = document.getElementById('conclusao')
+                mostrar.textContent = `Parabéns, por sua compra ter sido no valor de R$${result.toFixed(2)}, você tem direito a um brinde!`
+            }
+            else{
+                mostrar = document.getElementById('conclusao')
+                mostrar.textContent = `Valor final da compra R$${result.toFixed(2)}`
+            }
+        }
+        function show(){
+            var final = parseFloat(document.getElementById('totalValor').value)
+            mostrar = document.getElementById('conclusao')
+            mostrar.textContent = `Valor final da compra R$${final.toFixed(2)}`
+        }
+    </script>
 
 
     
+    <h1>4 - Verificando maior de idade</h1>
+    <span>Insira sua idade</span>
+    <input type="number" id="idadi"> <br><br>
+
+    <button onclick="verific()">Verificar</button>
+
+    <h2 id="kevin"></h2>
+
+    <script>
+        function verific(){
+            var idade = document.getElementById('idadi').value
+            var idades = parseInt(idade)
+            if (idades >= 18){
+                show = document.getElementById('kevin')
+                show.textContent = 'Você é maior de idade'
+            }
+            else{
+                show = document.getElementById('kevin')
+                show.textContent = 'Você é menor de idade'
+            }
+        }
+    </script>
+
 
 </body>
 </html>
