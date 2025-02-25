@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prática 01</title>
+</head>
+<body>
+
+
+    <h1>Soma de dois números!</h1>
+
+    <span>Insira o primeiro número</span>
+    <input type="number" id="n1"> <br>
+    <span>Insira o segundo número</span>
+    <input type="number" id="n2"><br>
+
+    <button onclick="somar()">+</button>
+
+    <h2 id="resultado"></h2>
+
+    <script>
+        function somar(){
+            var primeiroNumero = document.getElementById('n1').value
+            var segundoNumero = document.getElementById('n2').value
+            var valor1 = parseFloat(primeiroNumero)
+            var valor2 = parseFloat(segundoNumero)
+
+            var soma = valor1 + valor2
+            valorFinal = document.getElementById('resultado');
+            valorFinal.textContent = `Resultado: ${soma}`;
+        }   
+    </script>
+
+
+<h1>Média de 3 Notas</h1>
+    <span>Insira o Primeiro número</span>
+    <input type="number" id="nu1"> <br>
+    <span>Insira o Segundo número</span>
+    <input type="number" id="nu2"><br>
+    <span>Insira o Terceiro número</span>
+    <input type="number" id="nu3"><br>
+
+    <button onclick="media()">Calcular</button>
+    
+    <h2 id="resultado2"></h2>
+
+    <script>
+        function media(){
+            var numero1 = parseFloat(document.getElementById('nu1').value)
+            var numero2 = parseFloat(document.getElementById('nu2').value)
+            var numero3 = parseFloat(document.getElementById('nu3').value)
+            var calculo = (numero1 + numero2 + numero3) / 3
+            valorFina2 = document.getElementById('resultado2')
+            valorFina2.textContent = 'Resultado: '+calculo.toFixed(2)
+            
+        }
+    </script>
+
+
+
+    
+</body>
+</html>
